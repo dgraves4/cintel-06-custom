@@ -2,14 +2,14 @@
 This is a cutom project showcasing an application that includes interactive analytics and continuous intelligence elements. 
 
 ## Requirements (for local environment only)
-faicons
-pandas
-numpy
-plotly
-shiny
-shinylive
-shinywidgets
-scipy
+- faicons
+- pandas
+- numpy
+- plotly
+- shiny
+- shinylive
+- shinywidgets
+- scipy
 
 ## Try in the Browser
 
