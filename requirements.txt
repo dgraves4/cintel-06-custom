@@ -1,8 +1,6 @@
-faicons
 pandas
 numpy
+nba_api
 plotly
-shiny
-shinylive
 shinywidgets
 scipy
