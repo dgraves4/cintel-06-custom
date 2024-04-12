@@ -21,7 +21,7 @@ from shinyswatch import theme
 from shiny.express import render, ui
 
 ui.page_opts(
-    title="NBA Dashboard",
+    title="DG's NBA Dashboard",
     fillable=True,
 )
 
