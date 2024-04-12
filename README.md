@@ -1,6 +1,5 @@
 # cintel-06-custom: Custom NBA Stats App
-This is a cutom project showcasing an application that includes interactive analytics and continuous intelligence elements. 
-
+This is a cutom project showcasing an application that includes interactive analytics and continuous intelligence elements to display and compare various NBA players and their career stats. 
 ## Requirements (for local environment only)
 - faicons
 - pandas
@@ -94,6 +93,7 @@ git push origin main
 Go to your GitHub repo settings and enable GitHub Pages for the docs folder.
 
 ## Sources 
-- Data from API-NBA: https://rapidapi.com/api-sports/api/api-nba  
+- Data from NBA_API: https://developer.geniussports.com/nbangss/stream/
+- Shiny Express theme and code: https://shiny.posit.co/py/templates/nba-dashboard/  
 - Shiny for Python: https://shiny.posit.co/py/
 - Favicon generator: https://favicon.io/

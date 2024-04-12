@@ -4,7 +4,7 @@ import numpy as np
 from plots import color_palette, density_plot, radar_chart
 
 # Import some pre-downloaded data on player careers
-from shared import app_dir, careers_df, from_start, gp_max, players_dict, stats, to_end
+from shared import app_dir, players_df, careers_df, from_start, gp_max, players_dict, stats, to_end
 from shiny import reactive, req
 from shiny.express import input, ui
 from shinywidgets import render_plotly
@@ -13,11 +13,11 @@ from shiny.express import render, ui
 
 ui.page_opts(title="NBA Dashboard", fillable=True,)
 
-theme.lux()
+theme.pulse()
 
 ui.include_css(app_dir / "styles.css")
 
-with ui.sidebar():
+with ui.sidebar(open="open"):
     ui.input_selectize(
         "players",
         "Search for players",
@@ -45,11 +45,32 @@ with ui.sidebar():
         sep="",
     )
 
+    ui.hr()
+    ui.h6("Links:")
+    ui.a(
+        "Dgraves on GitHub",
+        href="https://github.com/dgraves4/cintel-06-custom",
+        target="_blank",
+    )
+
+    ui.a(
+        "GitHub App",
+        href="https://dgraves4.github.io/cintel-06-custom/",
+        target="_blank",
+    )
+
+    ui.a("PyShiny", href="https://shiny.posit.co/py/", target="_blank")
+
+    ui.a(
+        "PyShiny Express",
+        href="https://shiny.posit.co/blog/posts/shiny-express/",
+        target="_blank",
+    )
 
 with ui.layout_columns(col_widths=[4, 8]):
     with ui.card(full_screen=True):
-        ui.card_header("Player career comparison")
-
+        ui.card_header("Player career comparison") 
+        
         @render_plotly
         def career_compare():
             return radar_chart(percentiles(), player_stats(), stats)
@@ -68,8 +89,14 @@ with ui.layout_columns(col_widths=[4, 8]):
                 careers(), player_stats(), input.stat(), players_dict, on_rug_click
             )
 
-        ui.card_footer("Click on a player's name to add them to the comparison.")
-
+# New card for the rendered data grid
+with ui.card(full_screen=True):
+    ui.card_header("Player Information")
+    
+    @render.data_frame
+    def players_table():
+        selected_players = req(input.players())
+        return players_df[players_df["person_id"].isin(selected_players)]
 
 # Filter the careers data based on the selected games and seasons
 @reactive.calc
