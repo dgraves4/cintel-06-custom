@@ -8,8 +8,12 @@ from shared import app_dir, careers_df, from_start, gp_max, players_dict, stats,
 from shiny import reactive, req
 from shiny.express import input, ui
 from shinywidgets import render_plotly
+from shinyswatch import theme
+from shiny.express import render, ui
 
-ui.page_opts(title="NBA Dashboard", fillable=True)
+ui.page_opts(title="NBA Dashboard", fillable=True,)
+
+theme.lux()
 
 ui.include_css(app_dir / "styles.css")
 
