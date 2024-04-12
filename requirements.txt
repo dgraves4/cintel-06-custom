@@ -2,5 +2,6 @@ pandas
 numpy
 nba_api
 plotly
+shinyswatch
 shinywidgets
 scipy

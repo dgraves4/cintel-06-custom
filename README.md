@@ -1,5 +1,22 @@
 # cintel-06-custom: Custom NBA Stats App
-This is a cutom project showcasing an application that includes interactive analytics and continuous intelligence elements to display and compare various NBA players and their career stats. 
+This is a custom project showcasing the development of a Shiny application that includes interactive analytics and continuous intelligence elements to display and compare various NBA players and their career stats. 
+
+## Project Structure
+
+This project includes the following files and directories:
+- dashboard: Root directory containing the project files.
+- app.py: Main script for running the dashboard application.
+- careers.csv: Dataset containing career statistics for NBA players.
+- careers_all.csv: Extended dataset containing additional career details.
+- etl.py: Script for performing data extraction, transformation, and loading.
+- players.csv: Dataset containing information about NBA players.
+- plots.py: Helper functions for generating plots and visualizations.
+- shared.py: Module for shared variables and functions used across scripts.
+- styles.css: CSS file for customizing the appearance of the dashboard.
+- .gitignore: File specifying which files and directories to ignore in version control.
+- README.md: Markdown file providing an overview of the project.
+- requirements.txt: File listing all Python dependencies for the project.
+
 ## Requirements (for local environment only)
 - faicons
 - pandas
