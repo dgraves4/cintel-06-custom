@@ -11,7 +11,7 @@ from shinywidgets import render_plotly
 from shinyswatch import theme
 from shiny.express import render, ui
 
-ui.page_opts(title="NBA Dashboard", fillable=True,)
+ui.page_opts(title="DG's NBA Dashboard", fillable=True,)
 
 theme.pulse()
 
