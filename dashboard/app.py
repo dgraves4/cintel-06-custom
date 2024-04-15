@@ -1,5 +1,5 @@
 import numpy as np
-
+from faicons import icon_svg
 # Import helpers for plotting logic
 from plots import color_palette, density_plot, radar_chart
 
